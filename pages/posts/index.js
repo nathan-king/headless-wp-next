@@ -1,10 +1,12 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { Config } from "../../config";
+import PostIndex from "../../components/PostIndex";
 
 export default function Home({ posts }) {
   return (
     <div>
-      <h2>Posts</h2>
+      <PostIndex />
+      {/* <h2>Posts</h2>
       <ul>
         {posts.map((post) => (
           <li>
@@ -13,7 +15,7 @@ export default function Home({ posts }) {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
