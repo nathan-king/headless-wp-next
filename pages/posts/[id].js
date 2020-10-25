@@ -1,14 +1,16 @@
 import { Config } from "../../config";
 import parse from "html-react-parser";
+import Layout from "../../components/Layout";
 
 export default function Post({ post }) {
+  const title = parse(post.title.rendered);
   const content = parse(post.content.rendered);
 
   return (
-    <div>
-      <h1>{post.title.rendered}</h1>
-      {content}
-    </div>
+    <Layout>
+      <h2>{title}</h2>
+      <p>{content}</p>
+    </Layout>
   );
 }
 
